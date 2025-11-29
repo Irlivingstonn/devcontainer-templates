@@ -37,23 +37,48 @@ These dev containers isolate all of that and make sure each ROS2 project runs in
 ### 1. Create a new ROS2 project
 ```bash
 mkdir -p ~/workspaces/my_project/src
-cd ~/workspaces/my_project```
+cd ~/workspaces/my_project
+```
 
 ### 2. Copy a template
 Example for Humble:
 ```bash
 cp -r ~/devcontainer-templates/ros2-humble/.devcontainer .
+```
 
 ### 3. Open the folder in VS Code
+```
 Press: Ctrl + Shift + P → Dev Containers: Reopen in Container
-
+```
 VS Code will build the container and mount your project located at:
+```
 /workspaces/<your-project>
-
+```
 You can now run:
 ```bash
 colcon build
 source install/setup.bash
 rviz2
 ros2 run ...
+```
 directly inside the container.
+
+
+---
+
+## Folder Structure
+```
+devcontainer-templates/
+  ros2-humble/
+    .devcontainer/
+      devcontainer.json
+      Dockerfile
+  ros2-iron/
+    .devcontainer/
+      devcontainer.json
+      Dockerfile
+  ros2-rolling/
+    .devcontainer/
+      devcontainer.json
+      Dockerfile
+```
