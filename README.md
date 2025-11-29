@@ -37,7 +37,7 @@ These dev containers isolate all of that and make sure each ROS2 project runs in
 ### 1. Create a new ROS2 project
 ```bash
 mkdir -p ~/workspaces/my_project/src
-cd ~/workspaces/my_project
+cd ~/workspaces/my_project```
 
 ### 2. Copy a template
 Example for Humble:
